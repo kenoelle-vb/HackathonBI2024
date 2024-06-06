@@ -18,3 +18,4 @@ textblob
 newspaper3k
 lxml
 lxml_html_clean
+langchain_community
