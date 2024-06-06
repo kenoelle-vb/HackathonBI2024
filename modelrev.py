@@ -26,16 +26,16 @@ with st.sidebar:
 jangka_revenue = 0
 
 if jangka_revenue == "1 Minggu" :
-  jangka_revenue = 8
+  jangka_revenue += 8
 
 if jangka_revenue == "1 Bulan" :
-  jangka_revenue = 31
+  jangka_revenue += 31
 
-if jangka_revenue == "4 Bulan" :
-  jangka_revenue = 91
+if jangka_revenue == "1 Triwulan" :
+  jangka_revenue += 91
 
 if jangka_revenue == "1 Tahun" :
-  jangka_revenue = 366
+  jangka_revenue += 366
 
 gsheetkey_rev = "1ToBs4foOAW6tuXFTgntxwisnCIfu48jalpQS0M-RWcI"
 url_rev = f'https://docs.google.com/spreadsheet/ccc?key={gsheetkey_rev}&output=csv'
@@ -58,7 +58,7 @@ df_mkt = df_mkt.tail(jangka_revenue)
 x_mkt = df_mkt.drop(['Sales'], axis=1)
 y_mkt = df_mkt['Sales']
 
-xmkt_train, xmkt_test, ymkt_train, ymkt_test = train_test_split(x_mkt,y_mkt, test_size=0.2, random_state=2)
+xmkt_train, xmkt_test, ymkt_train, ymkt_test = train_test_split(x_mkt,y_mkt, test_size=0.33, random_state=2)
 
 modelmkt = LinearRegression()
 modelmkt.fit(xmkt_train, ymkt_train)
