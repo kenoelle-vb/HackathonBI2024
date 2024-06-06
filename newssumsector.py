@@ -1,5 +1,5 @@
 ##############
-from beautifulsoup4 import BeautifulSoup
+from bs4 import BeautifulSoup
 import streamlit as st
 import requests
 import tk as tk
