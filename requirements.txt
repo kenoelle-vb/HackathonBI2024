@@ -16,3 +16,4 @@ nltk
 tk
 textblob
 newspaper3k
+lxml
