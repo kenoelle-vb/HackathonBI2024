@@ -777,27 +777,27 @@ if newsprompting := st.chat_input("What is up?"):
 clientsector = Groq(api_key="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")
 
 if newstype == "Keadaan Ekonomi" :
-  summary_bullet_pointaggnews = f"Answer the question of {newsprompting}, only answer from {makro_summary} and translate it into Indonesian"
+  summary_bullet_pointaggnews = f"Answer the question of {newsprompting}, only answer from {makro_summary} and only answer in Indonesian"
   bulletpointsummarymakro = clientsector.chat.completions.create(messages=[{"role":"user", "content":summary_bullet_pointaggnews,}],model="llama3-8b-8192")
   answer_aggnews = bulletpointsummarymakro.choices[0].message.content
 
 if newstype == "Regulasi" :
-  summary_bullet_pointaggnews = f"Answer the question of {newsprompting}, only answer from {regulator_summary} and translate it into Indonesian"
+  summary_bullet_pointaggnews = f"Answer the question of {newsprompting}, only answer from {regulator_summary} and only answer in Indonesian"
   bulletpointsummaryregulasi = clientsector.chat.completions.create(messages=[{"role":"user", "content":summary_bullet_pointaggnews,}],model="llama3-8b-8192")
   answer_aggnews = bulletpointsummaryregulasi.choices[0].message.content
 
 if newstype == "Indonesia" :
-  summary_bullet_pointaggnews = f"Answer the question of {newsprompting}, only answer from {nasional_summary} and translate it into Indonesian"
+  summary_bullet_pointaggnews = f"Answer the question of {newsprompting}, only answer from {nasional_summary} and only answer in Indonesian"
   bulletpointsummarynasional = clientsector.chat.completions.create(messages=[{"role":"user", "content":summary_bullet_pointaggnews,}],model="llama3-8b-8192")
   answer_aggnews = bulletpointsummarynasional.choices[0].message.content
 
 if newstype == "Sosial" :
-  summary_bullet_pointaggnews = f"Answer the question of {newsprompting}, only answer from {rileks_summary} and translate it into Indonesian"
+  summary_bullet_pointaggnews = f"Answer the question of {newsprompting}, only answer from {rileks_summary} and only answer in Indonesian"
   bulletpointsummaryrileks = clientsector.chat.completions.create(messages=[{"role":"user", "content":summary_bullet_pointaggnews,}],model="llama3-8b-8192")
   answer_aggnews = bulletpointsummaryrileks.choices[0].message.content
 
 if newstype == "General" :
-  summary_bullet_pointaggnews = f"Answer the question of {newsprompting}, only answer from {informasi_summary} and translate it into Indonesian"
+  summary_bullet_pointaggnews = f"Answer the question of {newsprompting}, only answer from {informasi_summary} and only answer in Indonesian"
   bulletpointsummaryinformasi = clientsector.chat.completions.create(messages=[{"role":"user", "content":summary_bullet_pointaggnews,}],model="llama3-8b-8192")
   answer_aggnews = bulletpointsummaryinformasi.choices[0].message.content
 
