@@ -1,5 +1,5 @@
-import beautifulsoup4 as bs4
-from bs4 import BeautifulSoup
+##############
+from beautifulsoup4 import BeautifulSoup
 import streamlit as st
 import requests
 import tk as tk
