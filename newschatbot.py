@@ -37,11 +37,11 @@ informasi = "informasi"
 
 # STREAMLIT INPUT NEWS TYPE ---------------------------------------------------------------------
 
-progress_text = "Mohon ditunggu...."
-progress_bar = st.progress(0, text=progress_text)
+#progress_text = "Mohon ditunggu...."
+#progress_bar = st.progress(0, text=progress_text)
 
-for percentage_complete in range(100):
-    progress_bar.progress(percentage_complete + 1, text=progress_text)
+#for percentage_complete in range(100):
+    #progress_bar.progress(percentage_complete + 1, text=progress_text)
 
 with st.sidebar:
   newstype = st.selectbox(
